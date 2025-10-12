@@ -8,3 +8,7 @@ console.log(title);
 await context.close();
 
 });
+
+test('Secound Test Cases',async ({page})=>{
+    await page.goto("https://www.google.com/")
+})
