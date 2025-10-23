@@ -25,39 +25,3 @@ let LoginButton= await page.locator('#login-button');
  console.log(await titleText.textContent());
 
 });
-
-
-test('Print all Items', async ({ page }) => {
-  // Go to URL
-  await page.goto('https://www.saucedemo.com/');
-
-  // Locators
-  const username = page.locator('[placeholder="Username"]');
-  const password = page.locator('[placeholder="Password"]');
-  const loginButton = page.locator('#login-button');
-  const listItem = page.locator('.inventory_item'); // Correct selector
-
-  // Perform actions
-  await username.fill('standard_user');
-  await password.fill('secret_sauce');
-  await loginButton.click();
-
-  // Wait until page fully loads
-  await page.waitForLoadState('networkidle');
-
-  // Count all inventory items
-  const count = await listItem.count();
-  console.log('Total items:', count);
-
-  // Print all item names
-  for (let i = 0; i < count; i++) {
-    const name = await listItem.nth(i).locator('.inventory_item_name').textContent();
-    console.log(`Item ${i + 1}: ${name}`);
-  }
-  await expect(listItem).toHaveCount(6); // Swag Labs always shows 6 products
-
-// Click on the "Add to Cart" button of the first item
-await listItem.first().locator('#add-to-cart-sauce-labs-onesie').click();
-
-
-});
