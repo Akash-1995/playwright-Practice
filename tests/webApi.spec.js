@@ -1,5 +1,6 @@
 const { test, expect, request } = require('@playwright/test');
 
+test.describe('E-commerce API & UI tests', () => {
 const loginPayload = {
   userEmail: "test13@yopmail.com",
   userPassword: "Test@123"
@@ -44,4 +45,5 @@ test.describe('E-commerce API & UI tests', () => {
   //   command: 'npm run start',
   //   port: 3000,
   // }, 
+})
 });

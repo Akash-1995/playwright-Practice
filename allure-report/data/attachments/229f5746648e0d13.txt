@@ -1,0 +1,6 @@
+Login response: {
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGY4ZWE2ZWY2NjlkNmNiMGEyNGVkNWYiLCJ1c2VyRW1haWwiOiJ0ZXN0MTNAeW9wbWFpbC5jb20iLCJ1c2VyTW9iaWxlIjo5ODk4OTg5ODk4LCJ1c2VyUm9sZSI6ImN1c3RvbWVyIiwiaWF0IjoxNzYxMjM5MjczLCJleHAiOjE3OTI3OTY4NzN9.2XfYurXrvM-uDdnBcG3npUiOwVz-vmXaM_mZdR70olQ',
+  userId: '68f8ea6ef669d6cb0a24ed5f',
+  message: 'Login Successfully'
+}
+Login Successfully
