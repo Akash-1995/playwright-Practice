@@ -1,4 +1,5 @@
 const {expect,test}=require('@playwright/test')
+test.describe('Basic Test Suite',()=>{
 test('i am not starting over,i am starting from where i pause',async ({browser})=>{
 const context=await browser.newContext();
 const page=await context.newPage();
@@ -12,3 +13,5 @@ await context.close();
 test('Secound Test Cases',async ({page})=>{
     await page.goto("https://www.google.com/")
 })
+
+});

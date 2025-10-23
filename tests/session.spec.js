@@ -1,4 +1,5 @@
 const {test,expect} = require('@playwright/test');
+test.describe('Session Management Test Suite', ()=>{
 test('Session storage demo', async ({browser})=>{
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -31,4 +32,6 @@ test('Use session storage to login', async ({browser})=>{
     await page.waitForLoadState('networkidle');
     await page.pause();
     await context.close();
+})
+
 });

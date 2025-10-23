@@ -1,5 +1,6 @@
 const {test,expect}=require('@playwright/test');
 const data =require('../utils/loginTestdata.json')
+test.describe('Cart Test Suite',()=>{
 
 test('Add product to card ', async ({page})=>{
     await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
@@ -34,3 +35,5 @@ test('Add product to card ', async ({page})=>{
     
 
 })
+
+});

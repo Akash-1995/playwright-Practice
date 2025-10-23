@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const data = require('../utils/loginTestdata');
 
-
+test.describe('Web Elements Test Suite', () => {
 
 test('@sanity Test on new page navigation', async ({ browser }) => {
   const context = await browser.newContext();
@@ -36,3 +36,4 @@ test(`@abs practice `,async({page})=>{
 
      console.log(await email.inputValue());
 })
+});
